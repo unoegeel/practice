@@ -8,6 +8,6 @@ public class PracticeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PracticeApplication.class, args);
-		System.out.println("안녕, 그래 안녕");
 	}
+	
 }

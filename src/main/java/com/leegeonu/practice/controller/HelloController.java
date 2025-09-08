@@ -1,5 +1,6 @@
 package com.leegeonu.practice.controller;
 
+import javax.xml.ws.RequestWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,5 +15,11 @@ public class HelloController {
         model.addAttribute("data", "spring!!");
         return "hello";
     } 
+
+    @GetMapping("hello-mvc")
+    public String helloMvc(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
+        return "hello-template";
+    }
     
 }
